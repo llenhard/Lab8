@@ -17,11 +17,11 @@ namespace Lab_8
             List<string> color = new List<string> { "red", "blue", "pink" };
             string input;
 
-            Console.WriteLine("Welcome to our C# class.");
+            Console.WriteLine("Welcome to our C# class.\n");
 
             do
             {
-                Console.WriteLine($"We currently have {students.Count + 1} students in the class. Type a student's number (1-{students.Count})" +
+                Console.WriteLine($"We currently have {students.Count + 1} students in the class.\n\nType a student's number (1-{students.Count})" +
                     $"if you want to find out more information about one, or type 'new' if you want to add a new student.");
 
                 input = Console.ReadLine();
