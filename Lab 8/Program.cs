@@ -22,8 +22,8 @@ namespace Lab_8
                 try
                 {
                     Console.Write("Enter a student's ID: ");
-                    wantedStudent = int.Parse(Console.ReadLine()) - 1;
-                    studentName = students[wantedStudent, 0];
+                    wantedStudent = int.Parse(Console.ReadLine());
+                    studentName = students[wantedStudent-1, 0];
 
                     Console.WriteLine($"Student {wantedStudent} is {studentName}. What would you like to know about {studentName}? (enter 'hometown' or 'favorite food')");
                     do
@@ -37,7 +37,7 @@ namespace Lab_8
                                 break;
                             case "favorite food":
                                 string food = students[wantedStudent, 1];
-                                Console.WriteLine($"{wantedStudent}'s favorite food is {food}.");
+                                Console.WriteLine($"{studentName}'s favorite food is {food}.");
                                 continuing = false;
                                 break;
                             default:
@@ -52,7 +52,7 @@ namespace Lab_8
 
                 catch (Exception)
                 {
-                    Console.WriteLine("That isn't a valid student ID.");
+                    Console.WriteLine("That isn't a valid entry! Please re-enter your information.");
                 }
 
                 Console.WriteLine("Would you like to try another student ID? (y/n)");
